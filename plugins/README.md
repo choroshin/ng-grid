@@ -3,6 +3,15 @@ Notes
 
 For anyone else writing plugins, please feel free to add to this readme.
 
+Single Selection
+===============
+
+Singel selection for multiple checkbox select (select all checkbox)
+Usage
+-----
+
+          plugins: [new ngGridSingleSelectionPlugin()]
+
 Flexible-Height
 ===============
 
