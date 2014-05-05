@@ -11,6 +11,10 @@ Usage
 -----
 
           plugins: [new ngGridSingleSelectionPlugin()]
+          
+Example
+-------
+http://blogs.microsoft.co.il/choroshin/2014/05/05/ng-grid-single-row-selection-for-multiple-checkbox-plugin/
 
 Flexible-Height
 ===============
