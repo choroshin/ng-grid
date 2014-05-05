@@ -1,4 +1,4 @@
-function ngGridSelectOneRowPlugin() {
+function ngGridSingleSelectionPlugin() {
     var self = this;
     self.lastSelectedRow = null;
     self.selectedRowItems = [];
@@ -30,7 +30,7 @@ function ngGridSelectOneRowPlugin() {
         if (rowScope) {
             var row = rowScope.row;
             if (event.target.type !== 'checkbox') {
-                // on header select all rows checkbox was pressed
+                // if  select all rows checkbox was pressed
                 if (self.isAllRowSelected) {
                     self.selectedRowItems = self.grid.rowCache;
                 }
@@ -39,7 +39,7 @@ function ngGridSelectOneRowPlugin() {
                     rowItem.selectionProvider.setSelection(rowItem, false);
                 });
                 self.selectedRowItems = [];
-                //set to false lat selected row
+                //set to false last selected row
                 if (self.lastSelectedRow) {
                     self.lastSelectedRow.selectionProvider.setSelection(self.lastSelectedRow, false);
                 }
@@ -58,7 +58,7 @@ function ngGridSelectOneRowPlugin() {
             }
         }
     };
-    // mousedown event on checkbox header selection
+    // mousedown event for checkbox header selection
     self.onHeaderMouseDown = function(event) {
         if (event.target.type === 'checkbox') {
             if (!event.target.checked) {
